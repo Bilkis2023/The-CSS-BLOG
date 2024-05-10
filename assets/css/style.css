@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #d0d8e1;
+    line-height: 1.3;
+}
+header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background-color: #13293d;
+    color: #fff;
+}
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    margin: 2% 0;
+    font-size: 250%;
+}
+nav ul:{
+    display: flex;
+    justify-content: space-between;
+    min-width: 300px;
+}
+nav a {
+    color: #b9c6ae;
+    font-weight: bold;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #fff;
+}
+main {
+    display: flex;
+    flex: 1 1 0;
+    max-width: 96%;
+    margin: 2% auto;
+}
+article {
+border-bottom: 5px solid #9fa2a6;
+}
+article p {
+    margin: 2% 0;
+    font-size: 110%;
+}
+article ul {
+    margin-left: 5%;
+    font-size: 110%;
+    list-style: circle;
+}
+article li{
+    margin: 5px 0;
+}
+/* Use :nth-child() to select every even list item */
+article ul li:nth-child(even) {
+    background-color: #869c92;
+}
+/* Use adjacent sibling combinator (+) to select <p> elements that come immediately after a <ul> element inside of an <article> element */
+article ul + P {
+background-color: #13293d;
+color: #fff;
+}
+/* Use child combinator (>) with a wildcard selector (*) to select every single element that is a direct descendent( or child) of any div eliment in an articlse element. */
+article div > * {
+    padding: 20px;
+    border: 4px solid #963c18;
+}
+footer {
+    display: flex;
+    font-size: 200%;
+    justify-content: center;
+    padding: 2%;
+    background-color: #13293d;
+    color: #fff;
+}
+@media scdreen and (max-width:768px) {
+    header{
+        flex-direction: column;
+    }
+    main {
+        max-width: 1200px;
+    }
+}
